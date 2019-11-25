@@ -3,7 +3,7 @@ const { admins, color } = require('../config.json');
 const { RichEmbed } = require('discord.js')
 
 module.exports = {
-	name: 'lt-start',
+	name: 'start',
 	description: 'Start a Lottery',
 	execute(message, args) {
         // CHECK IF A LOTTERY IS ALREADY IN PROCESS
@@ -24,12 +24,12 @@ module.exports = {
         if(args.length < 1) {
             hours = 24
             tickets = 1000
-            msg = 'Express 24-hour Art Lottery'
+            msg = 'We\'re starting a 24-hour Raffle'
         }
         else {
-            hours = args[0]
-            tickets = args[1]
-            msg = args.slice(2).join(' ')            
+            hours = args[0] ? args[0] : 24
+            tickets = args[1] ? args[1] : 1000
+            msg = args[2] ? args.slice(2).join(' ') : 'We\'re starting a ' + args[0] + '-hour Raffle'          
         }
 
         // CALCULATES THE DRAW DATE BASED ON THE ARGUMENTS GIVEN

@@ -8,7 +8,7 @@ function randomize(number) {
 }
 
 module.exports = {
-	name: 'lt-draw',
+	name: 'draw',
 	description: 'Draw the winning number of the lottery',
 	execute(message, args) {
         // CHECK IF THERE IS AN ACTIVE LOTTERY
@@ -29,7 +29,7 @@ module.exports = {
             let id = parseInt(key)
             if(id) {
                 let obj = {
-                    member: id,
+                    member: key,
                     ticket: val
                 }
                 tickets.push(obj)
@@ -42,7 +42,6 @@ module.exports = {
             store.set('running',false)
             return
         }
-
         // SELECTS RANDOM WINNER FROM TICKET POOL
         let rand = randomize(tickets.length)
         let winner = tickets[rand]
@@ -56,6 +55,7 @@ module.exports = {
         message.channel.send(embed)
 
         // CLOSING LOTTERY
+        store.clearAll()
         store.set('running',false)
     }
 }

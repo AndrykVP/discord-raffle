@@ -1,7 +1,7 @@
 var store = require('store')
 
 module.exports = {
-	name: 'lt-number',
+	name: 'number',
 	description: 'Select a number to participate in lottery',
 	execute(message, args) {
         // CHECK THAT A LOTTERY IS RUNNING
@@ -19,7 +19,7 @@ module.exports = {
         }
 
         // CHECK IF MEMBER ALREADY SELECTED A NUMBER
-        let ticket = store.get(message.author.id)
+        let ticket = store.get(message.member.id)
         if(ticket) {
             message.reply('You already selected number ' + ticket)
             return
@@ -47,7 +47,6 @@ module.exports = {
             message.reply('Sorry, but that number has already been selected by ' + holder)
             return
         }
-
         // CHECK THAT CHOSEN NUMBER IS WITHIN RANGE
         if(ticket < 0 || ticket > max)
         {
@@ -55,7 +54,7 @@ module.exports = {
         }
 
         // STORE THE MEMBER'S TICKET NUMBER AND WISH THEM GOOD LUCK
-        store.set(message.author.id,ticket)
+        store.set(message.member.id,ticket)
         message.reply('You have been added to the lottery with the ticket number ' + ticket + '. Good luck!')
     }
 }
