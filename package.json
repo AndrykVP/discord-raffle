@@ -1,0 +1,25 @@
+{
+  "name": "discord-raffle",
+  "version": "1.0.0",
+  "description": "A Discord.js Bot to handle raffles",
+  "author": {
+    "name": "AndrykVP",
+    "email": "andriclucid@gmail.com"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ."
+  },
+  "keywords": [
+    "Discord",
+    "Discord.js",
+    "Discord Bot",
+    "Raffle Bot"
+  ],
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.5.1",
+    "dotenv": "^8.2.0"
+  }
+}

@@ -1,0 +1,11 @@
+# ENVIRONTMENT VARIABLES
+.env
+
+# NODE.JS MODULES
+/node_modules
+/node_modules/*
+
+# LOGS
+*.log
+/logs
+/logs/*
