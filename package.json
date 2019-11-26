@@ -17,10 +17,11 @@
     "Discord Bot",
     "Raffle Bot"
   ],
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "discord.js": "^11.5.1",
     "dotenv": "^8.2.0",
     "store": "^2.0.12"
-  }
+  },
+  "repository": "github:andrykvp/discord-raffle"
 }
