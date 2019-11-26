@@ -1,5 +1,5 @@
-# Discord Raffle Bot
->A simple Discord Bot to run Raffles
+# Discord Raffle Bot ![Version](https://img.shields.io/github/package-json/v/andrykvp/discord-raffle?style=flat-square) ![Code Size](https://img.shields.io/github/languages/code-size/andrykvp/discord-raffle?style=flat-square) ![License](https://img.shields.io/github/license/andrykvp/discord-raffle?style=flat-square)
+>A simple Discord Bot to run Raffles 
 
 ## Run Locally
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
@@ -31,18 +31,18 @@ Once you've set your bot token, you should open the `config.json` file to furthe
 
 * The `'prefix'` property defines a unique character that will be used in your server to run commands.
 * The `'admins'`property is an array of either usernames or roles that have permission to run special commands, such as starting a raffle and drawing a winner.
-* The `'color'` property should be a hexadecimal code of a color of your preference, used in the Rich Embedded messages that the bot sends when starting a raffle or drawing a winner.
+* The `'color'` property should be a hexadecimal code, without the `#` symbol, of a color of your preference, used in the Rich Embedded messages that the bot sends when starting a raffle or drawing a winner.
 
 Here's an example:
 ```json
 {
     "prefix": "#",
     "admins": [
-       "Administrators", // Role
-       "Moderators", // Role
-       "AndrykVP" // Username
+       "Administrators",
+       "Moderators",
+       "AndrykVP"
     ],
-    "color": "ffffff" // Color without the # symbol
+    "color": "ffffff"
 }
 ```
 
@@ -89,3 +89,5 @@ The bot will check if there's still time for entries (as per the established tim
 
 ### Draw a Winner
 At the moment, drawing has to be done manually by typing `#draw`. The bot will then randomly select a winner from the pool and print a message, letting everyone know what the winning number was, and who it belongs to.
+
+## Development ![discord.js](https://img.shields.io/github/package-json/dependency-version/andrykvp/discord-raffle/discord.js?style=flat-square) ![store.js](https://img.shields.io/github/package-json/dependency-version/andrykvp/discord-raffle/store?style=flat-square) ![dotenv](https://img.shields.io/github/package-json/dependency-version/andrykvp/discord-raffle/dotenv?style=flat-square) ![last commit](https://img.shields.io/github/last-commit/andrykvp/discord-raffle?style=flat-square)
