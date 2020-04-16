@@ -9,10 +9,10 @@ If you intend to run or test this bot yourself, you **must** have Node.js instal
 ### Install
 Clone or download this repository and run the following commands from your terminal, to install dependencies before running the bot.
 
-The commands assume your local clone of the repository is in your Downloads folder, and that you named the folder `discord_raffle`.
+The commands assume your local clone of the repository is in your Downloads folder, and that you didn't renamed the downloaded folder.
 
 ```bash
-cd ~/Downloads/discord_raffle
+cd ~/Downloads/discord-raffle-master
 npm install
 ```
 

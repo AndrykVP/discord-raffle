@@ -1,5 +1,5 @@
 var store = require('store')
-const { admins, color } = require('../config.json')
+const { prefix, admins, color } = require('../config.json');
 const { RichEmbed } = require('discord.js')
 
 module.exports = {
@@ -45,7 +45,7 @@ module.exports = {
                 .setTitle('Starting a new Lottery!')
                 .setDescription(msg)
                 .addField('Draw Date', 'Winner will be drawn on ' + date, true)
-                .addField('Get A Number!', 'Use the command !lottery-number and type a number between 1 and ' + tickets.toLocaleString('en-US'), true)
+                .addField('Get A Number!', 'Use the command ' + prefix + 'number and type a number between 1 and ' + tickets.toLocaleString('en-US'), true)
     
             message.channel.send(embed)
         }
@@ -55,5 +55,5 @@ module.exports = {
             return
         }
 
-	},
+	}
 }
